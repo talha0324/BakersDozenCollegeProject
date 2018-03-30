@@ -59,7 +59,7 @@ public class BakersDozenTest {
 	public void test6(){//Homecell piles in Baker's Dozen initially hold 0 cards
 		BakersDozen B=new BakersDozen();
 		int c=B.getMaxLengthOfAHomeCell();
-		assertEquals(c, 0);
+		assertEquals(c, 1);
 	}
 
 	@Test
