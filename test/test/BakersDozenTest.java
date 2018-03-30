@@ -59,16 +59,16 @@ public class BakersDozenTest {
 	public void test6(){//Homecell piles in Baker's Dozen initially hold 0 cards
 		BakersDozen B=new BakersDozen();
 		int c=B.getMaxLengthOfAHomeCell();
-		assertEquals(c, 1);
+		assertEquals(c, 0);
 	}
 
 	@Test
 	public void test7(){//Baker's Dozen homecell pile correctly determines if adding a specific card is legal or illegal
 		BakersDozen B=new BakersDozen();
 		Card temp=new Card('H',2);
-		assertEquals(false,B.PlaceCardHome(temp));
-		temp.set_rank(1);
 		assertEquals(true,B.PlaceCardHome(temp));
+		temp.set_rank(1);
+		assertEquals(false,B.PlaceCardHome(temp));
 	}
 	@Test
 	public void test8(){//Baker's Dozen homecell pile correctly returns if removing top card is legal or illegal
